@@ -29,6 +29,7 @@ i18n
     fallbackLng: "en",
     detection : {
       order: ['htmlTag', 'cookie', 'localStorage', 'path', 'subdomain'],
+      caches: ['cookie','localStorage'],
     }
   });
 
