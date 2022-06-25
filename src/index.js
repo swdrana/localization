@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 import "./index.css";
 // import App from './App';
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
+  .use(LanguageDetector)
   .init({
     // the translations
     // (tip move them in a JSON file and import them,
@@ -24,8 +26,10 @@ i18n
         },
       },
     },
-    lng: document.querySelector('html').lang, // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
+    detection : {
+      order: ['htmlTag', 'cookie', 'localStorage', 'path', 'subdomain'],
+    }
   });
 
 function App() {
