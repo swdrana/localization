@@ -39,7 +39,8 @@ function App() {
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
   useEffect(() => {
     document.body.dir = currentLanguage.dir || "ltr";
-  }, [currentLanguage]);
+    document.title = t('language')
+  }, [currentLanguage, t]);
 
   return (
     <div className="container">
