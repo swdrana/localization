@@ -1,3 +1,4 @@
 {
-  "Welcome to React": "React এবং react-i18next এ আপনাকে স্বাগতম  {{date}}"
+  "Welcome to React": "React এবং react-i18next এ আপনাকে স্বাগতম  {{date}}",
+  "language":"ভাষা"
 }
